@@ -1,0 +1,154 @@
+/* Start Global Ruls  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: radial-gradient(#5c6bc0, var(--alt-color));
+  font-family: Arial, Tahoma;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+:root {
+  --main-color: white;
+  --alt-color: #e91e63;
+}
+/* End Global Ruls  */
+
+/*Start The Section For The Input  */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vh;
+  height: 100vh;
+  transform: translateX(0);
+  transition: 0.5;
+  -webkit-transition: 0.5;
+  -moz-transition: 0.5;
+  -ms-transition: 0.5;
+  -o-transition: 0.5;
+  animation: appear-the-section 0.8s linear, rotate-the-section 0.8s 0.8s linear;
+  -webkit-animation: appear-the-section 0.8s linear,
+    rotate-the-section 0.8s 0.8s linear;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+.main > p {
+  margin-bottom: 20%;
+  color: #ffeb3b;
+  font-size: 17px;
+  font-weight: bold;
+}
+.main div {
+  width: 80%;
+  padding: 15px;
+  border: 2px dashed var(--main-color);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+@media (max-width: 400px) {
+  .main div {
+    padding: 15px 5px;
+  }
+}
+.main div p {
+  width: fit-content;
+  margin: 6px auto 50px;
+  color: var(--main-color);
+  font-weight: bold;
+  animation: appear 2.5s 1.7s linear;
+  -webkit-animation: appear 2.5s 1.7s linear;
+}
+.main div input {
+  display: block;
+  margin: 0 auto 10px;
+  border: none;
+  border-bottom: 2px solid var(--alt-color);
+  padding-bottom: 9px;
+  text-align: center;
+  outline: none;
+  caret-color: var(--alt-color);
+  color: var(--alt-color);
+  font-weight: bold;
+  animation: appear 2.5s 1.7s linear;
+  -webkit-animation: appear 2.5s 1.7s linear;
+}
+.main div button {
+  background: var(--alt-color);
+  color: var(--main-color);
+  padding: 7px;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  float: right;
+  cursor: pointer;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  animation: appear 2.5s 1.7s linear;
+  -webkit-animation: appear 2.5s 1.7s linear;
+}
+@media (max-width: 400px) {
+  .main div input,
+  .main div button {
+    width: 95%;
+  }
+}
+/*End The Section For The Input  */
+
+/* Start Animations  */
+@keyframes appear-the-section {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+}
+
+@keyframes rotate-the-section {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* End Animations  */
